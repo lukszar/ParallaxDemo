@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParallaxDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3I-uh-NrA">
+                                <rect key="frame" x="78" y="60" width="218" height="30"/>
+                                <state key="normal" title="1. MXParallaxHeader framework"/>
+                                <connections>
+                                    <segue destination="ihK-0P-RhE" kind="presentation" id="5kx-1v-tk5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBb-Lv-bAl">
+                                <rect key="frame" x="69" y="115" width="237" height="30"/>
+                                <state key="normal" title="2. MX 2 ParallaxHeader framework"/>
+                                <connections>
+                                    <segue destination="Otj-tu-LXH" kind="presentation" id="suP-15-ETo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QBb-Lv-bAl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hAa-Tv-083"/>
+                            <constraint firstItem="z3I-uh-NrA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hQP-Eq-qjM"/>
+                            <constraint firstItem="QBb-Lv-bAl" firstAttribute="top" secondItem="z3I-uh-NrA" secondAttribute="bottom" constant="25" id="lIF-e4-fNg"/>
+                            <constraint firstItem="z3I-uh-NrA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="ztF-d1-DVs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--MX2-->
+        <scene sceneID="pFh-gU-ftm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MX2" id="Otj-tu-LXH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZw-Rf-Amr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="86"/>
+        </scene>
+        <!--MX1-->
+        <scene sceneID="eaz-aF-wMV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MX1" id="ihK-0P-RhE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHe-7q-UfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866" y="33"/>
+        </scene>
+    </scenes>
+</document>

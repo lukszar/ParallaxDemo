@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CLL-P0-WfJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="MJX-pS-eo4">
+            <objects>
+                <viewController id="CLL-P0-WfJ" customClass="MXMainViewController" customModule="ParallaxDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XZp-fG-Ag1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tJd-Fq-RmG"/>
+                    </view>
+                    <connections>
+                        <segue destination="GRt-Ux-eFy" kind="custom" identifier="parallax_header" customClass="MXParallaxHeaderSegue" id="iQW-PK-kcw"/>
+                        <segue destination="Jt3-yW-BNq" kind="custom" identifier="content_view" customClass="MXScrollViewControllerSegue" id="i7f-ic-HhW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTB-gr-iQf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="171"/>
+        </scene>
+        <!--Header View Controller-->
+        <scene sceneID="X2S-H5-LJA">
+            <objects>
+                <viewController id="GRt-Ux-eFy" customClass="MXHeaderViewController" customModule="ParallaxDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k16-KX-1Dc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pHP-Ze-uIL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBJ-AI-m13" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905" y="-293"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="qoA-5W-4r4">
+            <objects>
+                <viewController id="Jt3-yW-BNq" customClass="MXContentViewController" customModule="ParallaxDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="53z-sZ-LUu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FlY-JG-5Yw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FlY-JG-5Yw" firstAttribute="trailing" secondItem="fQC-Tc-Acd" secondAttribute="trailing" id="1fW-1u-vUT"/>
+                            <constraint firstItem="FlY-JG-5Yw" firstAttribute="leading" secondItem="fQC-Tc-Acd" secondAttribute="leading" id="3Vh-FM-Vwy"/>
+                            <constraint firstItem="FlY-JG-5Yw" firstAttribute="bottom" secondItem="fQC-Tc-Acd" secondAttribute="bottom" id="QaG-M2-NhC"/>
+                            <constraint firstItem="FlY-JG-5Yw" firstAttribute="top" secondItem="53z-sZ-LUu" secondAttribute="top" id="X2d-tP-d8p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fQC-Tc-Acd"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="FlY-JG-5Yw" id="tPm-D4-4Oq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Scr-4l-NFy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904.79999999999995" y="396.25187406296857"/>
+        </scene>
+    </scenes>
+</document>
